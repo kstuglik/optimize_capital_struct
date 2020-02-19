@@ -33,7 +33,7 @@ def main():
     '''wyswietlenie listy firm, które będą sprawdzane'''
     # print(list_of_company_name)
 
-    for company_name in list_of_company_name[:4]:
+    for company_name in list_of_company_name[:20]:
         path_to_xlsx_file = path_to_folder_spolki_gpw + company_name + '.xlsx'
 
 
@@ -64,8 +64,8 @@ def main():
                 print('%s nie jest notowana na liscie wartosci rynkowej dla %s'%(company_name,daty_bilansowe[1]))
     
     
-    # print(company_dict_pasywa_list)
-    # print(vector_change_with_market_value)
+    print(company_dict_pasywa_list)
+    print(vector_change_with_market_value)
     print('liczba dopasowan:\t%d'%len(company_dict_pasywa_list))
 
 
