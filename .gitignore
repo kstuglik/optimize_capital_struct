@@ -1,4 +1,4 @@
-*result
-result/*
-*braki/
-*__pycache__/
+result/
+braki/
+__pycache__/
+dane_otrzymane/
