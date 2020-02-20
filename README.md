@@ -8,6 +8,10 @@ Do utworzenia sieci neuronowej zastosowano biblioteke: keras
 W projekcie znajdują się foldery:
 *  ```dane_otrzymane```
 *  ```siec_neuronowa```
+	*	csv
+		* trzeba samemu wygenerowac plik *.csv, np. z użyciem libreoffice(save as): 
+			> all_small_vectors.csv,
+			> all_big_vectors.csv
 *  ```skrypty ```
 	* result
 		* pliki
