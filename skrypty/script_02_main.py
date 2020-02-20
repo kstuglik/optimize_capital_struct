@@ -1,9 +1,10 @@
 from script_01_conf import *
+
 from prepare import *
 from save_results import *
 
 '''
-    data bilansowa i roczniki brane pod uwage sa ustawione w pliku conf!
+    data bilansowa, roczniki i inne ważne parametry są definiowane w pliku konfiguracyjnym! 
 '''
 
 
@@ -33,7 +34,17 @@ def main():
     '''wyswietlenie listy firm, które będą sprawdzane'''
     # print(list_of_company_name)
 
-    for company_name in list_of_company_name[:20]:
+
+
+    '''
+    szybki test bez koniecznosci wczytywania wszystkiego z listy:
+    zamiast: for company_name in list_of_company_name:
+    mozna sprawdzic: for company_name in list_of_company_name[:10]:
+    '''
+
+
+
+    for company_name in list_of_company_name[:10]:
         path_to_xlsx_file = path_to_folder_spolki_gpw + company_name + '.xlsx'
 
 
@@ -63,9 +74,6 @@ def main():
             else:
                 print('%s nie jest notowana na liscie wartosci rynkowej dla %s'%(company_name,daty_bilansowe[1]))
     
-    
-    print(company_dict_pasywa_list)
-    print(vector_change_with_market_value)
     print('liczba dopasowan:\t%d'%len(company_dict_pasywa_list))
 
 

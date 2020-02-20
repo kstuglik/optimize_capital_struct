@@ -127,7 +127,6 @@ def load_csv_from_xlsx(path_to_xlsx_file,okres_rozliczeniowy):
         return pasywa
 
     except Exception as e:
-        # print ('EXCEPTION: %s' % e)
         head, file_name = os.path.split(path_to_xlsx_file)
         brak_daty_bilansowej.append('%s'%file_name)
         print('%s\tnie ma daty bilansowej z dnia:\t%s!'%(file_name,okres_rozliczeniowy))

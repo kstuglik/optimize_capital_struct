@@ -1,3 +1,5 @@
+'''*NA PRZYSZLOSC TRZEBA POMYSLEC O TYM BY LACZONE PLIKI BYLY SPRAWDZANE POD WZGLEDEM WYSTEPOWANIA DUPLIKATOW'''
+
 import os
 import pandas as pd
 import csv
@@ -27,8 +29,7 @@ def concatenate(main_folder,sub_folders,input_file,output_file):
                     for line in infile:
                         outfile.write(line)
             except Exception as e:
-                #jesli chcemy wyswietlac komunikaty o bledach to nalezy zakomenetowac continue a odkomentowac print(...)
-                continue
+                continue#TRYB CICHY BEZ POWIADOMIEN
                 # print ('Plik: %s nie został odnaleziony!' %fname)
 
     outfile.close()

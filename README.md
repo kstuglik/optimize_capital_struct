@@ -14,6 +14,18 @@ Opis zawartosci folderow w projekcie:
 
 generalnei wszystkie firmy maja jedną i tą samą date bilansową ale zdażają się pojedyncze przypadki, że coś jest inaczej np 2015-09-30	2016-09-30 np SYGNITY, AB '2013-06-30
 
+Mozna przejrzec katalogi
+
+Start 
+to przejscie do katalogu skrypty
+opcjonalna zmana parametrow w skrypcie 
+python3.7 script_01_conf.py
+prosze koniecznie sprawdzic jest tam okreslone jakie dane sa teraz przetwarzane, i gdzie, skad sa brane etc,
+
+uruchomienie 
+python3.7 script_02_main.py
+sprawdzenie i uruchomienie 
+python3.7 script_03_concatenate.py
 
 KOLEJNOŚĆ URUCHAMIANIA SKRYPTÓW I KONFIGURACJA
 
