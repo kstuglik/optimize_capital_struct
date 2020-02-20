@@ -10,10 +10,12 @@ Do utworzenia sieci neuronowej zastosowano biblioteke: keras
 *  ```siec_neuronowa```
 	*	csv
 		* trzeba samemu wygenerowac plik *.csv, np. z użyciem libreoffice(save as): 
-			> all_small_vectors.csv\
-			> all_big_vectors.csv
+			* all_small_vectors.csv
+			* all_big_vectors.csv
 	* jupiter
-	* csv
+		* vec29.ipynb
+		* vec58.ipynb
+		* network_load.py
 *  ```skrypty ```
 	* result
 		* pliki
@@ -35,7 +37,7 @@ Do utworzenia sieci neuronowej zastosowano biblioteke: keras
 
 generalnei firmy maja jedną i tą samą date bilansową ale zdażają się przypadki, że jest inaczej np.
 > 2015-09-30 SYGNITY\
->  2013-06-30 AB \
+>  2013-06-30 AB
 
   
 ### FOLDER SKRYPTY
@@ -67,7 +69,7 @@ jupyter notebook
 folder o nazwie: 2012-2013 - tworzy sie dla parametrow:
 > daty_bilansowe = ['2012-12-31','2013-12-31']\
 > rocznik_1 = '2013'\
-> rocznik_2 = '2014'\
+> rocznik_2 = '2014'
 
 rocznik_1 i rocznik_2 są kluczem w słowniku 'roczniki' i wskazuje nazwe pliku, z którego należy odczytać wartość rynkową:
 
@@ -87,5 +89,4 @@ Po uruchomieniu main() będą pojawiać się komunikaty, które mówią o tym ż
 * COMPANY nie jest notowana na liscie wartosci rynkowej dla 2013-12-31
 
 Te informacje sa przechowywane w  folderze 'braki', gdzie podfoldery mają w nazwie godzine o ktorej zostały uruchomiony
-
 
