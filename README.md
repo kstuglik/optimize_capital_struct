@@ -17,6 +17,9 @@ Do utworzenia sieci neuronowej zastosowano biblioteke: keras
 		* vec58.ipynb
 		* network_load.py
 *  ```skrypty ```
+	* braki
+		* brak_daty_bilansowej.txt
+		* brak_na_liscie_wartosci_rynkowej.txt
 	* result
 		* pliki
 		* big_vector.txt
@@ -25,9 +28,12 @@ Do utworzenia sieci neuronowej zastosowano biblioteke: keras
 		* small_vector.json
 		* small_vector.txt
 		* small_vector.xlsx
-	* braki
-		* brak_daty_bilansowej.txt
-		* brak_na_liscie_wartosci_rynkowej.txt
+	* prepare.py
+	* save_results.py
+	* script_01_conf.py
+	* script_02_main.py
+	* script_03_concatenate.py
+
 *  ```img```
   
   
