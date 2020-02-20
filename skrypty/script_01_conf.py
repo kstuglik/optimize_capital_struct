@@ -1,6 +1,7 @@
 '''
 *******************************************************************************
                             PLIK KONFIGURACYJNY
+*******************************************************************************
 
 DOSTARCZONA Z PROJEKTEM KONFIGURACJA POZWALA NA URUCHOMIENIE SKRYPTOW
 *   w razie potrzeby prosze dostosowywać parametry do swoich potrzeb
@@ -22,12 +23,29 @@ STRUKTURA PLIKU:
 [UWAGA!]        rocznik_2 = '2014'
 
 
+Kolejno wymienione pliki korzystają z danych umieszczonych w tym pliku:
+    
+    script_02_main.py
+    prepare.py
+    save_results.py
+
+
 *******************************************************************************
 '''
 
 
 '''
-ISNIEJE zaleznosc miedzy wartosciami rocznik_1, rocznik_2 a dostepnymi kluczami w slowniku roczniki!
+ISNIEJE zaleznosc miedzy wartosciami rocznik_1, rocznik_2 a kluczami w slowniku roczniki!
+
+z umieszczonych ponizez: daty_bilansowe i rocznik_1 i rocznik_2
+mozna odkomentowywac jeden 'blok' i zakomnetowac inny
+i puszczac generacje wektorow, ktore beda zapisywaly sie w katalogu result
+do osobnych podfolderow
+
+
+trzeba uwazac zeby nie nadpisac danych,bo: jesli wywolamy jeszcze raz program, 
+zmienimy tylko date bilansową to stracimy te poprzednie wyniki,
+chyba ze zmienimy nizej w parametrze nazwe folderu dla wynikow dodajac jakis znak
 '''
 
 
@@ -65,6 +83,7 @@ rocznik_2 = '2018'
 '''
 *******************************************************************************
 ad.1)   lokalizacja katalogow z danymi *.xlsx
+*******************************************************************************
 '''
 
 path_to_folder_ceny_akcji = '../dane_otrzymane/ceny akcji i liczba/'
@@ -161,6 +180,7 @@ litery_kolumn = [
 '''
 *******************************************************************************
 ad.2)   foldery i pliki do których zapisywany jest output  
+*******************************************************************************
 '''
 folder_braki = 'braki'
 brak_daty_bilansowej_file = 'brak_daty_bilansowej.txt'
@@ -191,6 +211,7 @@ pasywa_prev_filename = 'pasywa_prev'
 '''
 *******************************************************************************
 ad.3)  TWORZENIE KATALOGOW DO PRZECHOWYWANIA WYNIKOW
+*******************************************************************************
 '''
 
 from pathlib import Path
@@ -206,6 +227,7 @@ Path(folder_rocznik).mkdir(parents=True, exist_ok=True)
 '''
 *******************************************************************************
 ad.4)  ZMIENNE BEZ POTRZEBY MODYFIKACJI
+*******************************************************************************
 '''
 
 brak_daty_bilansowej = []
@@ -216,15 +238,13 @@ wartosc_rynkowa_dict = {}
 company_dict_pasywa_list = {}
 vector_change_with_market_value = {}
 
+
+
+'''
+jesli chcemy uzywac funkcji clear_files() trzeba doprecyzowac sciezke dla plikow
+'''
+
 lista_plikow_do_usuniecia_przed_rozpoczeciem = [
     # 'brak_daty_bilansowej.txt', #ta lista moze posluzyc do przeszukania firm z inną datą bilansową
-    'brak_na_liscie_wartosci_rynkowej.txt',
-    'pasywa_prev_and_next.json',
-    'pasywa_prev_with_market_value.txt',
-    'pasywa_prev_with_market_value.xlsx',
-    'pasywa_prev.txt',
-    'pasywa.txt',
-    'vectors.json',
-    'vectors.txt',
-    'vectors.xlsx'
+
 ]

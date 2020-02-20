@@ -44,7 +44,7 @@ def main():
 
 
 
-    for company_name in list_of_company_name[:10]:
+    for company_name in list_of_company_name:
         path_to_xlsx_file = path_to_folder_spolki_gpw + company_name + '.xlsx'
 
 
