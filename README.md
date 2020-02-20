@@ -10,10 +10,10 @@ Do utworzenia sieci neuronowej zastosowano biblioteke: keras
 *  ```siec_neuronowa```
 	*	csv
 		* trzeba samemu wygenerowac plik *.csv, np. z użyciem libreoffice(save as): 
-			> all_small_vectors.csv
+			> all_small_vectors.csv\
 			> all_big_vectors.csv
-        * jupiter
-        * csv
+	* jupiter
+	* csv
 *  ```skrypty ```
 	* result
 		* pliki
@@ -45,9 +45,10 @@ Dane konfiguracyjne umieszczono w pliku:
 python3.7 script_01_conf.py
 ```
 
-Kolejność uruchamiania skryptów:
+#### Kolejność uruchamiania skryptów:
+Przetworzenie danych - przygotowanie wektorów
 ```sh
-python3.7 script_02_main.py - przetworzenie danych
+python3.7 script_02_main.py
 ```
 Połączenie wielu plików z wektorami w jeden plik
 ```sh
@@ -63,20 +64,20 @@ jupyter notebook
 ```
 
 ### PARAMETRRY Z PLIKU KONFIGURACYJNEGO
-`folder: 2012-2013` - tworzy sie dla nastepujacych parametrow (ustawiane w pliku script_01_conf.py)
->daty_bilansowe = ['2012-12-31','2013-12-31']
-rocznik_1 = '2013'
-rocznik_2 = '2014'
+folder o nazwie: 2012-2013 - tworzy sie dla parametrow:
+> daty_bilansowe = ['2012-12-31','2013-12-31']\
+> rocznik_1 = '2013'\
+> rocznik_2 = '2014'\
 
 rocznik_1 i rocznik_2 są kluczem w słowniku 'roczniki' i wskazuje nazwe pliku, z którego należy odczytać wartość rynkową:
 
 > roczniki = {
-> '2013':'Rocznik_2014__GR.xls'
-> '2014':'Rocznik_2015__GR.xls'
-> '2015':'Rocznik_2016__GR.xls'
-> '2016':'Rocznik_2017_GR.xls'
-> '2017':'Rocznik_2018_GR.xls'
-> '2018':'Rocznik_2019_GR.xls'
+> '2013':'Rocznik_2014__GR.xls'\
+> '2014':'Rocznik_2015__GR.xls'\
+> '2015':'Rocznik_2016__GR.xls'\
+> '2016':'Rocznik_2017_GR.xls'\
+> '2017':'Rocznik_2018_GR.xls'\
+> '2018':'Rocznik_2019_GR.xls'\
 > }
 
 ****************
@@ -86,4 +87,5 @@ Po uruchomieniu main() będą pojawiać się komunikaty, które mówią o tym ż
 * COMPANY nie jest notowana na liscie wartosci rynkowej dla 2013-12-31
 
 Te informacje sa przechowywane w  folderze 'braki', gdzie podfoldery mają w nazwie godzine o ktorej zostały uruchomiony
+
 
